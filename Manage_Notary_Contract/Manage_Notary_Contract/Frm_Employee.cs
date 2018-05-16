@@ -36,8 +36,19 @@ namespace Manage_Notary_Contract
             bll = new BLL_Employee();
             List_Employee = new DataTable();
             List_Employee = bll.getEmployee(ref err);
+            DataTable data = new DataTable();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if ((bool)row.Cells["col_stt"].Value)
+                {
+                    row.Cells["col_sttShow"].Value = "Còn Làm";
+                }
+                else
+                {
+                    row.Cells["col_sttShow"].Value = "Đã nghĩ";
+                }
+            }
             dataGridView1.DataSource = List_Employee;
-
         }
 
         private void Frm_Employee_Load(object sender, EventArgs e)
@@ -51,8 +62,8 @@ namespace Manage_Notary_Contract
             dem = new DTO_Employee();
             dem.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["col_Id_Em"].Value.ToString());
             dem.Name = dataGridView1.CurrentRow.Cells["col_Name_Em"].Value.ToString();
-            dem.Bday = dataGridView1.CurrentRow.Cells["col_birth_day"].Value.ToString();
-            dem.Stday = dataGridView1.CurrentRow.Cells["col_start_day"].Value.ToString();
+            dem.Bday = dataGridView1.CurrentRow.Cells["col_birth_day"].Value.ToString().Substring(0,10);
+            dem.Stday = dataGridView1.CurrentRow.Cells["col_start_day"].Value.ToString().Substring(0,10);
             dem.Salary = dataGridView1.CurrentRow.Cells["col_salary"].Value.ToString();
             LoadDTOToControl(dem);
         }

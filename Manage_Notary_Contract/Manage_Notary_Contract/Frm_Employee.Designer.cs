@@ -47,6 +47,7 @@
             this.col_start_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_sttShow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +127,8 @@
             this.col_birth_day,
             this.col_start_day,
             this.col_salary,
-            this.col_stt});
+            this.col_stt,
+            this.col_sttShow});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 227);
             this.dataGridView1.Name = "dataGridView1";
@@ -225,7 +227,13 @@
             this.col_stt.DataPropertyName = "Is_Delete";
             this.col_stt.HeaderText = "Trạng Thái";
             this.col_stt.Name = "col_stt";
+            this.col_stt.Visible = false;
             this.col_stt.Width = 200;
+            // 
+            // col_sttShow
+            // 
+            this.col_sttShow.HeaderText = "Trạng Thái";
+            this.col_sttShow.Name = "col_sttShow";
             // 
             // Frm_Employee
             // 
@@ -278,5 +286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_start_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_sttShow;
     }
 }
