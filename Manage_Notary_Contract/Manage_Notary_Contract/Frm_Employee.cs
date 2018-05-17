@@ -36,18 +36,6 @@ namespace Manage_Notary_Contract
             bll = new BLL_Employee();
             List_Employee = new DataTable();
             List_Employee = bll.getEmployee(ref err);
-            DataTable data = new DataTable();
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if ((bool)row.Cells["col_stt"].Value)
-                {
-                    row.Cells["col_sttShow"].Value = "Còn Làm";
-                }
-                else
-                {
-                    row.Cells["col_sttShow"].Value = "Đã nghĩ";
-                }
-            }
             dataGridView1.DataSource = List_Employee;
         }
 
@@ -95,6 +83,7 @@ namespace Manage_Notary_Contract
             dem.Salary = txt_salary.Text;
         }
 
+        //Nút thêm nhân viên
         private void btn_Add_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
