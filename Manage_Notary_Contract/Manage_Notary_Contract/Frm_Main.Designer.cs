@@ -47,7 +47,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1156, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1156, 44);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,40 +57,41 @@
             this.mn_add_contract,
             this.mn_list_contract});
             this.menu_Manage_Contract.Name = "menu_Manage_Contract";
-            this.menu_Manage_Contract.Size = new System.Drawing.Size(175, 29);
+            this.menu_Manage_Contract.Size = new System.Drawing.Size(228, 38);
             this.menu_Manage_Contract.Text = "Quản lý Hợp Đồng";
             this.menu_Manage_Contract.Click += new System.EventHandler(this.menu_Manage_Contract_Click);
             // 
             // mn_add_contract
             // 
             this.mn_add_contract.Name = "mn_add_contract";
-            this.mn_add_contract.Size = new System.Drawing.Size(263, 30);
+            this.mn_add_contract.Size = new System.Drawing.Size(337, 38);
             this.mn_add_contract.Text = "Thêm hợp đồng";
             this.mn_add_contract.Click += new System.EventHandler(this.mn_add_contract_Click);
             // 
             // mn_list_contract
             // 
             this.mn_list_contract.Name = "mn_list_contract";
-            this.mn_list_contract.Size = new System.Drawing.Size(263, 30);
+            this.mn_list_contract.Size = new System.Drawing.Size(337, 38);
             this.mn_list_contract.Text = "Danh sách hợp đồng";
             this.mn_list_contract.Click += new System.EventHandler(this.mn_list_contract_Click);
             // 
             // menu_manage_em
             // 
             this.menu_manage_em.Name = "menu_manage_em";
-            this.menu_manage_em.Size = new System.Drawing.Size(166, 29);
+            this.menu_manage_em.Size = new System.Drawing.Size(223, 38);
             this.menu_manage_em.Text = "Quản lý nhân viên";
             this.menu_manage_em.Click += new System.EventHandler(this.menu_manage_em_Click);
             // 
             // quảnLýKháchHàngToolStripMenuItem
             // 
             this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
-            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(181, 29);
+            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(241, 38);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý khách hàng";
+            this.quảnLýKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKháchHàngToolStripMenuItem_Click);
             // 
             // Frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 607);
             this.Controls.Add(this.menuStrip1);

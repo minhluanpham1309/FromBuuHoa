@@ -13,7 +13,7 @@ namespace Manage_Notary_Contract
         SqlConnection cnn;
         SqlCommand cmd;
         SqlDataAdapter da;
-        string ConnectionString = "Server=TAKEDA_PHAM; database=Notary_Contract;integrated security=true";
+        string ConnectionString = "Server=HOURTHY;database=Notary_Contract;integrated Security=True;";
         public void Dispose()
         {
             if (cnn != null)

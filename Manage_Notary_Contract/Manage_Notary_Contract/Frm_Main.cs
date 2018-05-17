@@ -23,7 +23,7 @@ namespace Manage_Notary_Contract
             string err = "";
             if(database.KiemTraKetNoi(ref err)==true)
             {
-                MessageBox.Show("Ket koi thanh cong");
+                MessageBox.Show("Ket noi thanh cong");
             }
             else
             {
@@ -56,6 +56,13 @@ namespace Manage_Notary_Contract
             List_Contract frm_list = new List_Contract();
             frm_list.MdiParent = this;
             frm_list.Show();
+        }
+
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ManageCustomer customer = new Frm_ManageCustomer();
+            customer.MdiParent = this;
+            customer.Show();
         }
     }
 }

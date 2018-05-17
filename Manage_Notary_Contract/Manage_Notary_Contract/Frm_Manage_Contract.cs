@@ -356,10 +356,15 @@ namespace Manage_Notary_Contract
             lbl_add.Text = dto.Address;
         }
 
+        private void grb_info_person_Enter(object sender, EventArgs e)
+        {
+
+        }
         private void btn_show_list_Click(object sender, EventArgs e)
         {
             List_Contract frm_list = new List_Contract();
             frm_list.Show();
+
         }
     }
 }
