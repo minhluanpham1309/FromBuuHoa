@@ -37,7 +37,6 @@ namespace Manage_Notary_Contract
             List_Employee = new DataTable();
             List_Employee = bll.getEmployee(ref err);
             dataGridView1.DataSource = List_Employee;
-
         }
 
         private void Frm_Employee_Load(object sender, EventArgs e)
@@ -51,8 +50,8 @@ namespace Manage_Notary_Contract
             dem = new DTO_Employee();
             dem.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["col_Id_Em"].Value.ToString());
             dem.Name = dataGridView1.CurrentRow.Cells["col_Name_Em"].Value.ToString();
-            dem.Bday = dataGridView1.CurrentRow.Cells["col_birth_day"].Value.ToString();
-            dem.Stday = dataGridView1.CurrentRow.Cells["col_start_day"].Value.ToString();
+            dem.Bday = dataGridView1.CurrentRow.Cells["col_birth_day"].Value.ToString().Substring(0,10);
+            dem.Stday = dataGridView1.CurrentRow.Cells["col_start_day"].Value.ToString().Substring(0,10);
             dem.Salary = dataGridView1.CurrentRow.Cells["col_salary"].Value.ToString();
             LoadDTOToControl(dem);
         }
@@ -84,6 +83,7 @@ namespace Manage_Notary_Contract
             dem.Salary = txt_salary.Text;
         }
 
+        //Nút thêm nhân viên
         private void btn_Add_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
