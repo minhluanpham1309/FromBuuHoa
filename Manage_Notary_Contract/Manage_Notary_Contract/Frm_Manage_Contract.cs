@@ -29,16 +29,14 @@ namespace Manage_Notary_Contract
        
         private void Frm_Manage_Contract_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable();
-            bll_contract = new BLL_Contract();
-            dataTable = bll_contract.GetDataTableViewContract(ref err);
-            if (_dtocontract != null)
-            {
-                load_defaul_view(dataTable);
+            
+            if(_dtocontract != null)
                 SetDTOToControl(_dtocontract);
-            }
             else
             {
+                DataTable dataTable = new DataTable();
+                bll_contract = new BLL_Contract();
+                dataTable = bll_contract.GetDataTableViewContract(ref err);
                 load_defaul_view(dataTable);
             }
         }
@@ -258,7 +256,7 @@ namespace Manage_Notary_Contract
 
         private void cbo_name_contract_Leave(object sender, EventArgs e)
         {
-            if(((string)cbo_name_contract.SelectedItem).Equals("Hãy chọn hợp đồng")||cbo_name_contract.SelectedItem.ToString() == null)
+            if(((string)cbo_name_contract.SelectedItem).Equals("Hãy chọn hợp đồng")||cbo_name_contract.SelectedItem.ToString() == "")
             {
                 MessageBox.Show("Hãy chọn loại hợp đồng");
                 cbo_name_contract.Focus();
@@ -354,12 +352,6 @@ namespace Manage_Notary_Contract
             txt_id_code.Text = dto.Id_code;
             txt_name_p.Text = dto.Name;
             lbl_add.Text = dto.Address;
-        }
-
-        private void btn_show_list_Click(object sender, EventArgs e)
-        {
-            List_Contract frm_list = new List_Contract();
-            frm_list.Show();
         }
     }
 }

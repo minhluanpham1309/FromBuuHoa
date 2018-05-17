@@ -344,7 +344,6 @@
             this.btn_show_list.TabIndex = 8;
             this.btn_show_list.Text = "Xem danh sách";
             this.btn_show_list.UseVisualStyleBackColor = true;
-            this.btn_show_list.Click += new System.EventHandler(this.btn_show_list_Click);
             // 
             // label11
             // 
