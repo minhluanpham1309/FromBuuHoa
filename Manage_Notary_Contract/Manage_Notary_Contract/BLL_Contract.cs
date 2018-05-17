@@ -54,7 +54,7 @@ namespace Manage_Notary_Contract
             return data.getDataTable(ref err, "load_data_nobo", CommandType.StoredProcedure, null);
         }
         public bool AddContractExcuNonQue(ref string err, string no_num, string name_per,string id_code,string address,
-string phone, DateTime no_day,DateTime sign_day,int nu_book,string des,string ty_name,string type,int price,string sig_person, string note, int year_bo)
+        string phone, DateTime no_day,DateTime sign_day,int nu_book,string des,string ty_name,string type,int price,string sig_person, string note, int year_bo)
         {
             return data.ExNonQueryData(ref err, "add_contract", CommandType.StoredProcedure,new SqlParameter("@no_num", no_num), 
                 new SqlParameter("@name_per", name_per),

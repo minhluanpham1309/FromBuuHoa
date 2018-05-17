@@ -68,7 +68,7 @@
             this.label1.Location = new System.Drawing.Point(9, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 27);
+            this.label1.Size = new System.Drawing.Size(154, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ và tên: ";
             // 
@@ -76,7 +76,7 @@
             // 
             this.txt_name_p.Location = new System.Drawing.Point(134, 37);
             this.txt_name_p.Name = "txt_name_p";
-            this.txt_name_p.Size = new System.Drawing.Size(282, 35);
+            this.txt_name_p.Size = new System.Drawing.Size(282, 44);
             this.txt_name_p.TabIndex = 1;
             // 
             // grb_info_person
@@ -93,6 +93,7 @@
             this.grb_info_person.TabIndex = 2;
             this.grb_info_person.TabStop = false;
             this.grb_info_person.Text = "Thông tin người yêu cầu";
+            this.grb_info_person.Enter += new System.EventHandler(this.grb_info_person_Enter);
             // 
             // lbl_add
             // 
@@ -100,7 +101,7 @@
             this.lbl_add.Location = new System.Drawing.Point(8, 84);
             this.lbl_add.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_add.Name = "lbl_add";
-            this.lbl_add.Size = new System.Drawing.Size(93, 27);
+            this.lbl_add.Size = new System.Drawing.Size(124, 36);
             this.lbl_add.TabIndex = 4;
             this.lbl_add.Text = "Địa chỉ: ";
             // 
@@ -108,7 +109,7 @@
             // 
             this.txt_address.Location = new System.Drawing.Point(137, 78);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(670, 35);
+            this.txt_address.Size = new System.Drawing.Size(670, 44);
             this.txt_address.TabIndex = 5;
             this.txt_address.Leave += new System.EventHandler(this.txt_address_Leave);
             // 
@@ -118,7 +119,7 @@
             this.label2.Location = new System.Drawing.Point(423, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 27);
+            this.label2.Size = new System.Drawing.Size(127, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "CMND: ";
             // 
@@ -126,7 +127,7 @@
             // 
             this.txt_id_code.Location = new System.Drawing.Point(525, 34);
             this.txt_id_code.Name = "txt_id_code";
-            this.txt_id_code.Size = new System.Drawing.Size(282, 35);
+            this.txt_id_code.Size = new System.Drawing.Size(282, 44);
             this.txt_id_code.TabIndex = 3;
             this.txt_id_code.Leave += new System.EventHandler(this.txt_id_code_Leave);
             // 
@@ -162,7 +163,7 @@
             this.cbo_year.FormattingEnabled = true;
             this.cbo_year.Location = new System.Drawing.Point(671, 39);
             this.cbo_year.Name = "cbo_year";
-            this.cbo_year.Size = new System.Drawing.Size(130, 35);
+            this.cbo_year.Size = new System.Drawing.Size(130, 44);
             this.cbo_year.TabIndex = 21;
             // 
             // cbo_num_bo
@@ -170,7 +171,7 @@
             this.cbo_num_bo.FormattingEnabled = true;
             this.cbo_num_bo.Location = new System.Drawing.Point(526, 39);
             this.cbo_num_bo.Name = "cbo_num_bo";
-            this.cbo_num_bo.Size = new System.Drawing.Size(69, 35);
+            this.cbo_num_bo.Size = new System.Drawing.Size(69, 44);
             this.cbo_num_bo.TabIndex = 20;
             // 
             // label12
@@ -179,7 +180,7 @@
             this.label12.Location = new System.Drawing.Point(604, 39);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 27);
+            this.label12.Size = new System.Drawing.Size(92, 36);
             this.label12.TabIndex = 19;
             this.label12.Text = "Năm: ";
             // 
@@ -189,7 +190,7 @@
             this.label3.Location = new System.Drawing.Point(440, 172);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 27);
+            this.label3.Size = new System.Drawing.Size(120, 36);
             this.label3.TabIndex = 17;
             this.label3.Text = "Giá CC:";
             // 
@@ -198,14 +199,14 @@
             this.dpk_date_sign.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dpk_date_sign.Location = new System.Drawing.Point(602, 80);
             this.dpk_date_sign.Name = "dpk_date_sign";
-            this.dpk_date_sign.Size = new System.Drawing.Size(200, 35);
+            this.dpk_date_sign.Size = new System.Drawing.Size(200, 44);
             this.dpk_date_sign.TabIndex = 16;
             // 
             // txt_price
             // 
             this.txt_price.Location = new System.Drawing.Point(538, 169);
             this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(263, 35);
+            this.txt_price.Size = new System.Drawing.Size(263, 44);
             this.txt_price.TabIndex = 18;
             // 
             // dpk_date_ask
@@ -213,7 +214,7 @@
             this.dpk_date_ask.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dpk_date_ask.Location = new System.Drawing.Point(173, 80);
             this.dpk_date_ask.Name = "dpk_date_ask";
-            this.dpk_date_ask.Size = new System.Drawing.Size(200, 35);
+            this.dpk_date_ask.Size = new System.Drawing.Size(200, 44);
             this.dpk_date_ask.TabIndex = 15;
             // 
             // label10
@@ -222,7 +223,7 @@
             this.label10.Location = new System.Drawing.Point(409, 80);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(186, 27);
+            this.label10.Size = new System.Drawing.Size(243, 36);
             this.label10.TabIndex = 13;
             this.label10.Text = "Ngày công chứng:";
             // 
@@ -240,7 +241,7 @@
             this.label9.Location = new System.Drawing.Point(13, 213);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 27);
+            this.label9.Size = new System.Drawing.Size(149, 36);
             this.label9.TabIndex = 11;
             this.label9.Text = "Nội dung: ";
             // 
@@ -250,7 +251,7 @@
             this.label8.Location = new System.Drawing.Point(409, 39);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 27);
+            this.label8.Size = new System.Drawing.Size(141, 36);
             this.label8.TabIndex = 9;
             this.label8.Text = "Quyển số:";
             // 
@@ -261,7 +262,7 @@
             this.cbo_type_contract.FormattingEnabled = true;
             this.cbo_type_contract.Location = new System.Drawing.Point(173, 168);
             this.cbo_type_contract.Name = "cbo_type_contract";
-            this.cbo_type_contract.Size = new System.Drawing.Size(260, 35);
+            this.cbo_type_contract.Size = new System.Drawing.Size(260, 44);
             this.cbo_type_contract.TabIndex = 8;
             // 
             // label7
@@ -270,7 +271,7 @@
             this.label7.Location = new System.Drawing.Point(9, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 27);
+            this.label7.Size = new System.Drawing.Size(208, 36);
             this.label7.TabIndex = 7;
             this.label7.Text = "Loại hợp đồng:";
             // 
@@ -281,7 +282,7 @@
             this.cbo_name_contract.FormattingEnabled = true;
             this.cbo_name_contract.Location = new System.Drawing.Point(173, 121);
             this.cbo_name_contract.Name = "cbo_name_contract";
-            this.cbo_name_contract.Size = new System.Drawing.Size(629, 35);
+            this.cbo_name_contract.Size = new System.Drawing.Size(629, 44);
             this.cbo_name_contract.TabIndex = 6;
             this.cbo_name_contract.SelectedIndexChanged += new System.EventHandler(this.cbo_name_contract_SelectedIndexChanged);
             this.cbo_name_contract.Leave += new System.EventHandler(this.cbo_name_contract_Leave);
@@ -292,7 +293,7 @@
             this.label4.Location = new System.Drawing.Point(7, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 27);
+            this.label4.Size = new System.Drawing.Size(206, 36);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tên hợp đồng: ";
             // 
@@ -302,7 +303,7 @@
             this.label5.Location = new System.Drawing.Point(7, 85);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 27);
+            this.label5.Size = new System.Drawing.Size(194, 36);
             this.label5.TabIndex = 2;
             this.label5.Text = "Ngày yêu cầu:";
             // 
@@ -312,7 +313,7 @@
             this.label6.Location = new System.Drawing.Point(7, 45);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 27);
+            this.label6.Size = new System.Drawing.Size(210, 36);
             this.label6.TabIndex = 0;
             this.label6.Text = "Số công chứng:";
             // 
@@ -322,7 +323,7 @@
             this.txt_number_no.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_number_no.Location = new System.Drawing.Point(173, 39);
             this.txt_number_no.Name = "txt_number_no";
-            this.txt_number_no.Size = new System.Drawing.Size(220, 35);
+            this.txt_number_no.Size = new System.Drawing.Size(220, 44);
             this.txt_number_no.TabIndex = 1;
             this.txt_number_no.Leave += new System.EventHandler(this.txt_number_no_Leave);
             // 
@@ -351,7 +352,7 @@
             this.label11.Location = new System.Drawing.Point(36, 548);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 27);
+            this.label11.Size = new System.Drawing.Size(123, 36);
             this.label11.TabIndex = 9;
             this.label11.Text = "Ghi chú:";
             // 
@@ -359,12 +360,12 @@
             // 
             this.txt_note.Location = new System.Drawing.Point(137, 545);
             this.txt_note.Name = "txt_note";
-            this.txt_note.Size = new System.Drawing.Size(310, 35);
+            this.txt_note.Size = new System.Drawing.Size(310, 44);
             this.txt_note.TabIndex = 20;
             // 
             // Frm_detail_contract
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 597);
             this.Controls.Add(this.txt_note);

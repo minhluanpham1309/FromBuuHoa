@@ -18,11 +18,14 @@ namespace Manage_Notary_Contract
         }
 
         Cl_Database db = new Cl_Database();
-        string err = string.Empty;
+        public string err = string.Empty;
 
         public void Frm_Main_Load(object sender, EventArgs e)
         {
+
             MessageBox.Show(db.KiemTraKetNoi(ref err) ? "Connected" : "Fail\n" + err);
+            
+
         }
 
         private void menu_manage_em_Click(object sender, EventArgs e)
@@ -51,6 +54,7 @@ namespace Manage_Notary_Contract
             frm_list.Show();
         }
 
+
         private void tSmenuBttDangXuat_Click(object sender, EventArgs e)
         {
             DialogResult questionaire = MessageBox.Show("Bạn có muốn đăng xuất ra khỏi chương trình không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -65,6 +69,13 @@ namespace Manage_Notary_Contract
         private void tsMenuBttThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ManageCustomer customer = new Frm_ManageCustomer();
+            customer.MdiParent = this;
+            customer.Show();
+
         }
     }
 }
