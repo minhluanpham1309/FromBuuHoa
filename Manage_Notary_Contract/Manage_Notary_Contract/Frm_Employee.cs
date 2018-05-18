@@ -25,35 +25,35 @@ namespace Manage_Notary_Contract
         private void LoadDTOToControl(DTO_Employee dte)
         {
             txt_name.Text = dte.Name;
-            txt_bDay.Text = dte.Bday;
-            txt_stDay.Text = dte.Stday;
+            dt_BDay.Value = dte.Bday;
+            dt_StDay.Value = dte.Stday;
             txt_salary.Text = dte.Salary;
-          
         }
 
         private void loadGrvDataEmployee(ref string err)
         {
             bll = new BLL_Employee();
             List_Employee = new DataTable();
-            List_Employee = bll.getEmployee(ref err);
-            dataGridView1.DataSource = List_Employee;
-
+            if (cbo_stt.SelectedItem.Equals("Đang làm"))
+                List_Employee = bll.Load_Employee_with_Stt(ref err, false);
         }
 
         private void Frm_Employee_Load(object sender, EventArgs e)
         {
-            //Cl_Database data = new Cl_Database();
+            cbo_stt.SelectedItem = "Đang làm";
             loadGrvDataEmployee(ref err);
         }
 
+       
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             dem = new DTO_Employee();
             dem.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["col_Id_Em"].Value.ToString());
             dem.Name = dataGridView1.CurrentRow.Cells["col_Name_Em"].Value.ToString();
-            dem.Bday = dataGridView1.CurrentRow.Cells["col_birth_day"].Value.ToString();
-            dem.Stday = dataGridView1.CurrentRow.Cells["col_start_day"].Value.ToString();
+            dem.Bday = (DateTime)dataGridView1.CurrentRow.Cells["col_birth_day"].Value;
+            dem.Stday = (DateTime)dataGridView1.CurrentRow.Cells["col_start_day"].Value;
             dem.Salary = dataGridView1.CurrentRow.Cells["col_salary"].Value.ToString();
+            dem.Stt = (bool)dataGridView1.CurrentRow.Cells["col_stt"].Value;
             LoadDTOToControl(dem);
         }
 
@@ -66,21 +66,20 @@ namespace Manage_Notary_Contract
             {
                 if (dataGridView1.Rows[i].Cells["col_Check"].Selected)
                 {
-                    string s = dataGridView1.Rows[i].Cells["col_Check"].Value.ToString().Trim();
-                    if (s.Equals("1"))
-                    {
-                        dt = bll.delEmployee(ref err, dataGridView1.Rows[i].Cells["col_Id_Em"].Value.ToString());
-                    }
+                    bool stt;
+                    stt = !(bool)dataGridView1.Rows[i].Cells["col_stt"].Value;
+                    bll.updateSTT(ref err, (int)dataGridView1.Rows[i].Cells["col_Id_Em"].Value, DateTime.Now, stt);
+                    
                 }
             }
-            loadGrvDataEmployee(ref err);
+            cbo_stt_SelectedIndexChanged(sender, e);
         }
         private void loadControlToDTO()
         {
             dem = new DTO_Employee();
             dem.Name = txt_name.Text;
-            dem.Bday = txt_bDay.Text;
-            dem.Stday = txt_stDay.Text;
+            dem.Bday = dt_BDay.Value;
+            dem.Stday = dt_StDay.Value;
             dem.Salary = txt_salary.Text;
         }
 
@@ -105,6 +104,25 @@ namespace Manage_Notary_Contract
                 MessageBox.Show("Cập nhật thất bại");
             }
             loadGrvDataEmployee(ref err);
+        }
+
+        private void cbo_stt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List_Employee = new DataTable();
+            bll = new BLL_Employee();
+            if (cbo_stt.SelectedIndex == 0)
+            {
+                List_Employee = bll.getEmployee(ref err);
+            }
+            if (cbo_stt.SelectedIndex == 1)
+            {
+                List_Employee = bll.Load_Employee_with_Stt(ref err, false);
+            }
+            if (cbo_stt.SelectedIndex == 2)
+            {
+                List_Employee = bll.Load_Employee_with_Stt(ref err, true);
+            }
+            dataGridView1.DataSource = List_Employee;
         }
     }
 }

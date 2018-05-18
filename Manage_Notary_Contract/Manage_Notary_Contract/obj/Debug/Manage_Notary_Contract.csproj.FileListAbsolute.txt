@@ -11,7 +11,6 @@ D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_
 D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_Employee.resources
 D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_detail_contract.resources
 D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.List_Contract.resources
-<<<<<<< HEAD
 D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe.config
 D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe
 D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.pdb
@@ -27,7 +26,7 @@ D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\obj\Debug\Manage_Nota
 D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.pdb
 D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_Login.resources
 D:\PROJECT WF\FromBuuHoa\New folder\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_ForgetPass.resources
-=======
+
 C:\Users\hourt\3D Objects\Projects\FromBuuHoa\New folder\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe.config
 C:\Users\hourt\3D Objects\Projects\FromBuuHoa\New folder\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe
 C:\Users\hourt\3D Objects\Projects\FromBuuHoa\New folder\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.pdb
@@ -68,8 +67,8 @@ D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\Manage_Notary_Contract\o
 D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.csproj.CoreCompileInputs.cache
 D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.exe
 D:\Hoc\C#\Manage_Notary_Contract\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.pdb
->>>>>>> 3280fe1d94921f22e2f65db18ddfb07f9bbdea1f
->>>>>>> c1817d6f7b645428ff3019db07c88e8bfa92ff6f
+
+
 D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.csprojResolveAssemblyReference.cache
 D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_Employee.resources
 D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_ForgetPass.resources
@@ -86,3 +85,19 @@ D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contrac
 D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe.config
 D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe
 D:\PROJECT WF\FromBuuHoa\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.pdb
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe.config
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.exe
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\bin\Debug\Manage_Notary_Contract.pdb
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.csprojResolveAssemblyReference.cache
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_Employee.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_ForgetPass.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_Login.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_Main.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_ManageCustomer.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Frm_detail_contract.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.List_Contract.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.Properties.Resources.resources
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.csproj.GenerateResource.cache
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.csproj.CoreCompileInputs.cache
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.exe
+D:\Hoc\C#\Manage_Notary_Contract\Manage_Contract_Project\FromBuuHoa\Manage_Notary_Contract\Manage_Notary_Contract\obj\Debug\Manage_Notary_Contract.pdb

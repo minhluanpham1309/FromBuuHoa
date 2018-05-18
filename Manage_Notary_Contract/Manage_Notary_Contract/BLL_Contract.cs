@@ -94,14 +94,37 @@ string phone, DateTime no_day, DateTime sign_day, int nu_book, string des, strin
                 new SqlParameter("@year_bo", year_bo));
 
         }
-        public bool Update_Notary_Person(ref string err,string address, string phone, string name)
+        public bool Update_Notary_Person(ref string err, string address, string phone, string name)
         {
             return data.ExNonQueryData(ref err, "sp_update_noperson", CommandType.StoredProcedure, new SqlParameter("@address", address), new SqlParameter("@phone", phone), new SqlParameter("@name)", name));
         }
-
         public DataTable Load_data_all_control_with_noNum(ref string err, string no_num)
         {
             return data.getDataTable(ref err, "load_data_all_controll_with_noNum", CommandType.StoredProcedure, new SqlParameter("@no_num", no_num));
+        }
+        public DataTable Load_data_with_Month(ref string err, int date)
+        {
+            return data.getDataTable(ref err, "sp_search_month", CommandType.StoredProcedure, new SqlParameter("@month", date));
+        }
+        public DataTable Load_data_with_Year(ref string err, int date)
+        {
+            return data.getDataTable(ref err, "sp_search_year", CommandType.StoredProcedure, new SqlParameter("@year", date));
+        }
+        public DataTable Load_data_with_Day(ref string err, int date)
+        {
+            return data.getDataTable(ref err, "sp_search_day", CommandType.StoredProcedure, new SqlParameter("@day", date));
+        }
+        public DataTable Load_data_with_id_code(ref string err, string id_code)
+        {
+            return data.getDataTable(ref err, "sp_search_id_code", CommandType.StoredProcedure, new SqlParameter("@id_code", id_code));
+        }
+        public DataTable Load_data_with_no_num(ref string err, string no_num)
+        {
+            return data.getDataTable(ref err, "sp_search_no_num", CommandType.StoredProcedure, new SqlParameter("@no_num", no_num));
+        }
+        public DataTable Load_data_with_name(ref string err, string name)
+        {
+            return data.getDataTable(ref err, "sp_search_name", CommandType.StoredProcedure, new SqlParameter("@name", name));
         }
     }
 }

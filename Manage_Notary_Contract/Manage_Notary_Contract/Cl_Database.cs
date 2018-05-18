@@ -14,7 +14,8 @@ namespace Manage_Notary_Contract
         SqlCommand cmd;
         SqlDataAdapter da;
 
-        string ConnectionString = "Server=DESKTOP-24H985L\\SQLEXPRESS; database=Notary_Contract;integrated security=true";
+        static string s = Environment.MachineName;
+        string ConnectionString = "Server=" + s +";database=Notary_Contract;integrated security=true";
 
 
         public void Dispose()

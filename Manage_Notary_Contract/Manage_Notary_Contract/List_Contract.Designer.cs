@@ -20,7 +20,9 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        
+
+         #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -28,10 +30,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List_Contract));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.thaydoi = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tol_cbo_day = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.tol_cbo_month = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.tol_cbo_year = new System.Windows.Forms.ToolStripComboBox();
+            this.tol_cbo_show = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tol_txt_find = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tol_btn_change = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.col_check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -48,6 +60,7 @@
             this.col_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tol_find = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -76,35 +89,116 @@
             this.col_name_no,
             this.col_not});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1396, 552);
+            this.dataGridView1.Size = new System.Drawing.Size(1423, 534);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // toolStrip1
             // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thaydoi});
+            this.toolStripLabel1,
+            this.toolStripLabel2,
+            this.tol_cbo_day,
+            this.toolStripLabel3,
+            this.tol_cbo_month,
+            this.toolStripLabel4,
+            this.tol_cbo_year,
+            this.tol_cbo_show,
+            this.toolStripSeparator1,
+            this.tol_txt_find,
+            this.tol_find,
+            this.toolStripSeparator2,
+            this.tol_btn_change});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1396, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1423, 50);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // thaydoi
+            // toolStripLabel1
             // 
-            this.thaydoi.Image = ((System.Drawing.Image)(resources.GetObject("thaydoi.Image")));
-            this.thaydoi.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.thaydoi.Name = "thaydoi";
-            this.thaydoi.Size = new System.Drawing.Size(171, 29);
-            this.thaydoi.Text = "toolStripButton1";
-            this.thaydoi.Click += new System.EventHandler(this.thaydoi_Click);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(148, 47);
+            this.toolStripLabel1.Text = "Xem DS theo: ";
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(60, 47);
+            this.toolStripLabel2.Text = "Ngày";
+            // 
+            // tol_cbo_day
+            // 
+            this.tol_cbo_day.Name = "tol_cbo_day";
+            this.tol_cbo_day.Size = new System.Drawing.Size(100, 50);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(73, 47);
+            this.toolStripLabel3.Text = "Tháng";
+            // 
+            // tol_cbo_month
+            // 
+            this.tol_cbo_month.Name = "tol_cbo_month";
+            this.tol_cbo_month.Size = new System.Drawing.Size(121, 50);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(57, 47);
+            this.toolStripLabel4.Text = "Năm";
+            // 
+            // tol_cbo_year
+            // 
+            this.tol_cbo_year.Name = "tol_cbo_year";
+            this.tol_cbo_year.Size = new System.Drawing.Size(100, 50);
+            // 
+            // tol_cbo_show
+            // 
+            this.tol_cbo_show.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tol_cbo_show.Items.AddRange(new object[] {
+            "Xem Tất Cả",
+            "Xem Theo Năm",
+            "Xem Theo Tháng",
+            "Xem Theo Ngày"});
+            this.tol_cbo_show.Name = "tol_cbo_show";
+            this.tol_cbo_show.Size = new System.Drawing.Size(160, 50);
+            this.tol_cbo_show.Text = "Xem Theo năm";
+            this.tol_cbo_show.SelectedIndexChanged += new System.EventHandler(this.tol_cbo_show_SelectedIndexChanged);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
+            // 
+            // tol_txt_find
+            // 
+            this.tol_txt_find.Name = "tol_txt_find";
+            this.tol_txt_find.Size = new System.Drawing.Size(200, 50);
+            this.tol_txt_find.Leave += new System.EventHandler(this.tol_txt_find_Leave);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
+            // 
+            // tol_btn_change
+            // 
+            this.tol_btn_change.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tol_btn_change.Name = "tol_btn_change";
+            this.tol_btn_change.Size = new System.Drawing.Size(103, 47);
+            this.tol_btn_change.Text = "Thay Đổi";
+            this.tol_btn_change.Click += new System.EventHandler(this.tol_btn_change_Click);
+
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -112,7 +206,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 584);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1396, 30);
+            this.statusStrip1.Size = new System.Drawing.Size(1423, 30);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -184,7 +278,7 @@
             this.col_address.Frozen = true;
             this.col_address.HeaderText = "Địa Chỉ";
             this.col_address.Name = "col_address";
-            this.col_address.Width = 200;
+            this.col_address.Width = 180;
             // 
             // col_no_date
             // 
@@ -209,12 +303,12 @@
             // col_des
             // 
             this.col_des.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_des.DataPropertyName = "[Description]";
+            this.col_des.DataPropertyName = "Description";
             this.col_des.FillWeight = 81.81428F;
             this.col_des.Frozen = true;
             this.col_des.HeaderText = "Nội dung";
             this.col_des.Name = "col_des";
-            this.col_des.Width = 400;
+            this.col_des.Width = 300;
             // 
             // col_type_name
             // 
@@ -252,7 +346,6 @@
             this.col_name_no.Frozen = true;
             this.col_name_no.HeaderText = "Người Ký CC";
             this.col_name_no.Name = "col_name_no";
-            this.col_name_no.Visible = false;
             // 
             // col_not
             // 
@@ -264,11 +357,23 @@
             this.col_not.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_not.Visible = false;
             // 
+            // tol_find
+            // 
+            this.tol_find.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tol_find.Items.AddRange(new object[] {
+            "Theo Tên",
+            "Theo CMND",
+            "Theo SCC"});
+            this.tol_find.Name = "tol_find";
+            this.tol_find.Size = new System.Drawing.Size(150, 50);
+            this.tol_find.Text = "Tìm Kiếm";
+            this.tol_find.SelectedIndexChanged += new System.EventHandler(this.tol_find_SelectedIndexChanged);
+            // 
             // List_Contract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1396, 614);
+            this.ClientSize = new System.Drawing.Size(1423, 614);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -292,9 +397,20 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton thaydoi;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripComboBox tol_cbo_show;
+        private System.Windows.Forms.ToolStripTextBox tol_txt_find;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton tol_btn_change;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripComboBox tol_cbo_day;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripComboBox tol_cbo_month;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripComboBox tol_cbo_year;
         private System.Windows.Forms.DataGridViewCheckBoxColumn col_check;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_no_num;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_nu_book;
@@ -309,5 +425,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_name_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_not;
+        private System.Windows.Forms.ToolStripComboBox tol_find;
     }
+
 }

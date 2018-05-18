@@ -30,18 +30,23 @@ namespace Manage_Notary_Contract
 
         private void menu_manage_em_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
             Frm_Employee frm_Employee = new Frm_Employee();
             frm_Employee.MdiParent = this;
             frm_Employee.Show();
         }
 
-        private void menu_Manage_Contract_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void mn_add_contract_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
             Frm_detail_contract frm_Detail = new Frm_detail_contract();
             frm_Detail.MdiParent = this;
             frm_Detail.Show();
@@ -49,6 +54,10 @@ namespace Manage_Notary_Contract
 
         private void mn_list_contract_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
             List_Contract frm_list = new List_Contract();
             frm_list.MdiParent = this;
             frm_list.Show();
@@ -72,6 +81,10 @@ namespace Manage_Notary_Contract
         }
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in MdiChildren)
+            {
+                frm.Close();
+            }
             Frm_ManageCustomer customer = new Frm_ManageCustomer();
             customer.MdiParent = this;
             customer.Show();

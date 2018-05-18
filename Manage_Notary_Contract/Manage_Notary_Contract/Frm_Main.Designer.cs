@@ -69,7 +69,6 @@
             this.menu_Manage_Contract.Size = new System.Drawing.Size(228, 38);
 
             this.menu_Manage_Contract.Text = "Quản lý Hợp Đồng";
-            this.menu_Manage_Contract.Click += new System.EventHandler(this.menu_Manage_Contract_Click);
             // 
             // mn_add_contract
             // 
