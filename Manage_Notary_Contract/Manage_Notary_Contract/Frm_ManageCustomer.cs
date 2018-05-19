@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Entity;
 
 namespace Manage_Notary_Contract
 {
@@ -55,44 +57,56 @@ namespace Manage_Notary_Contract
 
         private void btn_deleteInfo_Click(object sender, EventArgs e)
         {
-            bll = new BLL_Person();
-            
-            for (int i = dt_customer.Rows.Count -1; i > 0; --i)
+            BLL_Person bll = new BLL_Person();
+
+            for (int i = dt_customer.Rows.Count - 1; i >= 0; i--)
             {
-                
-                if (dt_customer.Rows[i].Cells["col_check"].Selected)
+
+                if (dt_customer.Rows[i].Cells["col_check"].Selected == true)
                 {
                     string del = dt_customer.Rows[i].Cells["col_check"].Value.ToString().Trim();
-                    bool stt = false;
                     if (del.Equals("1"))
                     {
-                        string s = dt_customer.Rows[i].Cells["col_id_code"].Value.ToString();
-                        stt = bll.deleteCustomer(ref err, s);
+                        string s = dt_customer.Rows[i].Cells["col_id_code"].Value.ToString().Trim();
+                        bll.deleteCustomer(ref err, s);
                     }
-                     
-                    if (stt)
-                        MessageBox.Show("da xoa");
-                    else
-                        MessageBox.Show("khong xoa duoc");
                 }
             }
             load_GridView();
         }
+
         private void btn_addInfo_Click(object sender, EventArgs e)
         {
-            
-            DataTable data = new DataTable();
-            bll = new BLL_Person();
-            DTO_Person_Notatry add = new DTO_Person_Notatry();
-           
-            add.Name = txt_lastname.Text;
-            add.Id_code = txt_CMND.Text;
-            add.Address = txt_address.Text;
-            add.Phone = txt_phoneNumber.Text;
-            data = bll.addPersonData(ref err, add.Name, add.Id_code, add.Address, add.Phone);
+            person = new DTO_Person_Notatry();
+            person.Name = txt_lastname.Text.Trim();
+            person.Id_code = txt_CMND.Text.Trim();
+            person.Address = txt_address.Text.Trim();
+            person.Phone = txt_phoneNumber.Text.Trim();
+            string data = bll.addPersonData(ref err, person.Name, person.Id_code, person.Address, person.Phone).ToString();
             load_GridView();
         }
+        private void loadControlToDTO()
+        {
+            person = new DTO_Person_Notatry();
+            person.Name = txt_lastname.Text;
+            person.Id_code = txt_CMND.Text;
+            person.Address = txt_address.Text;
+            person.Phone = txt_phoneNumber.Text;
+        }
 
-       
+        private void btn_editInfo_Click(object sender, EventArgs e)
+        {
+            loadControlToDTO();
+            person.Id = int.Parse(dt_customer.CurrentRow.Cells["col_ID"].Value.ToString());
+            if (bll.editCustomerInfo(ref err, person.Id, person.Name, person.Id_code, person.Address, person.Phone))
+            {
+                MessageBox.Show("Update successful!");
+            }
+            else
+            {
+                MessageBox.Show("Update failure!");
+            }
+            load_GridView();
+        }
     }
 }

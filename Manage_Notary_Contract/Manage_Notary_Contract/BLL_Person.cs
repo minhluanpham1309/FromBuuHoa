@@ -29,18 +29,30 @@ namespace Manage_Notary_Contract
             return data.getDataTable(ref err, "Load_Data_Person", CommandType.StoredProcedure, null);
         }
 
-        public bool deleteCustomer(ref string err, string id)
+        public bool deleteCustomer(ref string err, string id_code)
         {
-            return data.ExNonQueryData(ref err, "sp_delete_customer", CommandType.StoredProcedure, new SqlParameter("@id", id));
+            return data.ExNonQueryData(ref err, "sp_delete_customer", CommandType.StoredProcedure, new SqlParameter("@id_code", id_code));
         }
 
-        public DataTable addPersonData(ref string err, string lastName, string id_code, string address, string phone)
+        public bool addPersonData(ref string err, string lastName, string id_code, string address, string phone)
         {
-            return data.getDataTable(ref err, "addCustomer", 
+            return data.ExNonQueryData(ref err, "addCustomer", 
                 CommandType.StoredProcedure, 
                 new SqlParameter("@lastName", lastName), 
                 new SqlParameter("@id_code", id_code), 
                 new SqlParameter("@address", address), 
+                new SqlParameter("@phoneNumber", phone));
+        }
+
+        
+        public bool editCustomerInfo(ref string err,int Id, string lastname, string id_code, string address, string phone)
+        {
+            return data.ExNonQueryData(ref err, "sp_edit_customer_info", 
+                CommandType.StoredProcedure,
+                new SqlParameter("@Id", Id),
+                new SqlParameter("@lastName", lastname),
+                new SqlParameter("@id_code", id_code),
+                new SqlParameter("@address", address),
                 new SqlParameter("@phone", phone));
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_lastname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_CMND = new System.Windows.Forms.TextBox();
@@ -44,6 +44,7 @@
             this.btn_editInfo = new System.Windows.Forms.Button();
             this.btn_deleteInfo = new System.Windows.Forms.Button();
             this.col_check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_id_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +59,7 @@
             this.txt_lastname.Location = new System.Drawing.Point(78, 85);
             this.txt_lastname.Margin = new System.Windows.Forms.Padding(2);
             this.txt_lastname.Name = "txt_lastname";
-            this.txt_lastname.Size = new System.Drawing.Size(212, 24);
+            this.txt_lastname.Size = new System.Drawing.Size(212, 41);
             this.txt_lastname.TabIndex = 3;
             // 
             // label2
@@ -68,7 +69,7 @@
             this.label2.Location = new System.Drawing.Point(26, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 19);
+            this.label2.Size = new System.Drawing.Size(68, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên";
             // 
@@ -78,7 +79,7 @@
             this.txt_CMND.Location = new System.Drawing.Point(457, 87);
             this.txt_CMND.Margin = new System.Windows.Forms.Padding(2);
             this.txt_CMND.Name = "txt_CMND";
-            this.txt_CMND.Size = new System.Drawing.Size(143, 24);
+            this.txt_CMND.Size = new System.Drawing.Size(143, 41);
             this.txt_CMND.TabIndex = 5;
             // 
             // label3
@@ -88,7 +89,7 @@
             this.label3.Location = new System.Drawing.Point(294, 88);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 17);
+            this.label3.Size = new System.Drawing.Size(316, 35);
             this.label3.TabIndex = 4;
             this.label3.Text = "Chứng Minh Nhân Dân";
             // 
@@ -104,7 +105,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Thông tin khách hàng";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // txt_address
             // 
@@ -112,7 +112,7 @@
             this.txt_address.Location = new System.Drawing.Point(78, 127);
             this.txt_address.Margin = new System.Windows.Forms.Padding(2);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(279, 24);
+            this.txt_address.Size = new System.Drawing.Size(279, 41);
             this.txt_address.TabIndex = 8;
             // 
             // label5
@@ -122,7 +122,7 @@
             this.label5.Location = new System.Drawing.Point(11, 129);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 17);
+            this.label5.Size = new System.Drawing.Size(113, 35);
             this.label5.TabIndex = 7;
             this.label5.Text = "Địa Chỉ";
             // 
@@ -132,7 +132,7 @@
             this.txt_phoneNumber.Location = new System.Drawing.Point(457, 129);
             this.txt_phoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txt_phoneNumber.Name = "txt_phoneNumber";
-            this.txt_phoneNumber.Size = new System.Drawing.Size(143, 24);
+            this.txt_phoneNumber.Size = new System.Drawing.Size(143, 41);
             this.txt_phoneNumber.TabIndex = 10;
             // 
             // label6
@@ -142,7 +142,7 @@
             this.label6.Location = new System.Drawing.Point(361, 131);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 17);
+            this.label6.Size = new System.Drawing.Size(180, 35);
             this.label6.TabIndex = 9;
             this.label6.Text = "Số điện thoại";
             // 
@@ -150,11 +150,12 @@
             // 
             this.dt_customer.AllowUserToAddRows = false;
             this.dt_customer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dt_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt_customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_check,
+            this.col_ID,
             this.col_name,
             this.col_id_code,
             this.col_address,
@@ -192,6 +193,7 @@
             this.btn_editInfo.TabIndex = 13;
             this.btn_editInfo.Text = "Sửa thông tin";
             this.btn_editInfo.UseVisualStyleBackColor = true;
+            this.btn_editInfo.Click += new System.EventHandler(this.btn_editInfo_Click);
             // 
             // btn_deleteInfo
             // 
@@ -207,16 +209,24 @@
             // 
             // col_check
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = false;
-            this.col_check.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.NullValue = false;
+            this.col_check.DefaultCellStyle = dataGridViewCellStyle2;
             this.col_check.FalseValue = "0";
             this.col_check.Frozen = true;
             this.col_check.HeaderText = "Check";
             this.col_check.Name = "col_check";
             this.col_check.TrueValue = "1";
             this.col_check.Width = 50;
+            // 
+            // col_ID
+            // 
+            this.col_ID.DataPropertyName = "ID_NPerson";
+            this.col_ID.Frozen = true;
+            this.col_ID.HeaderText = "ID";
+            this.col_ID.Name = "col_ID";
+            this.col_ID.Visible = false;
             // 
             // col_name
             // 
@@ -304,6 +314,7 @@
         private System.Windows.Forms.Button btn_editInfo;
         private System.Windows.Forms.Button btn_deleteInfo;
         private System.Windows.Forms.DataGridViewCheckBoxColumn col_check;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_id_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_address;
