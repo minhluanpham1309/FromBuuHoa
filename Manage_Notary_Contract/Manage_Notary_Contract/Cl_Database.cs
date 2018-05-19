@@ -14,8 +14,7 @@ namespace Manage_Notary_Contract
         SqlCommand cmd;
         SqlDataAdapter da;
 
-        static string s = Environment.MachineName;
-        string ConnectionString = "Server=" + s +";database=Notary_Contract;integrated security=true";
+        static string ConnectionString = "Server=" + CnnString.getServerName() + ";database=" + CnnString.dbName + ";integrated security=true";
 
 
         public void Dispose()
@@ -36,6 +35,10 @@ namespace Manage_Notary_Contract
                 da = null;
             }
 
+        }
+        public SqlConnection getConnection()
+        {
+            return cnn;
         }
         public Cl_Database()
         {
@@ -175,6 +178,30 @@ namespace Manage_Notary_Contract
                 cnn.Close();
             }
             return dataReader;
+        }
+        public string getServerName(string sql, CommandType ct)
+        {
+            string server = string.Empty;
+
+            using (SqlConnection cnn = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.CommandType = ct;
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        server = ds.Tables[0].Rows[0]["SERVER NAME"].ToString();
+                        //foreach (DataRow row in ds.Tables[0].Rows)
+                        //{
+                        //    server = DataRow.row["SERVER NAME"].ToString();
+                        //}
+                    }
+                }
+            }
+
+            return server;
         }
     }
 }
