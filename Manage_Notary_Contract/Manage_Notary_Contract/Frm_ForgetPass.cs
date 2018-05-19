@@ -63,6 +63,8 @@ namespace Manage_Notary_Contract
             else
             {
                 MessageBox.Show("Your search did not return any results. Please try again with other information.");
+                txtSearch.Clear();
+                txtSearch.Focus();
             }
         }
 

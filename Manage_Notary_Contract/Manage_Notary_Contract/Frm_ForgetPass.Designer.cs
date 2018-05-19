@@ -32,8 +32,8 @@
             this.lbInstruction = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bttSearch = new System.Windows.Forms.Button();
             this.bttCancel = new System.Windows.Forms.Button();
+            this.bttSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(26, 28);
+            this.lbTitle.Location = new System.Drawing.Point(26, 23);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(174, 25);
             this.lbTitle.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.lbInstruction.AutoSize = true;
             this.lbInstruction.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInstruction.Location = new System.Drawing.Point(71, 73);
+            this.lbInstruction.Location = new System.Drawing.Point(71, 62);
             this.lbInstruction.Name = "lbInstruction";
             this.lbInstruction.Size = new System.Drawing.Size(544, 21);
             this.lbInstruction.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.LightGray;
-            this.txtSearch.Location = new System.Drawing.Point(75, 106);
+            this.txtSearch.Location = new System.Drawing.Point(75, 95);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(540, 29);
             this.txtSearch.TabIndex = 2;
@@ -76,30 +76,16 @@
             this.panel1.Controls.Add(this.lbTitle);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.lbInstruction);
-            this.panel1.Location = new System.Drawing.Point(34, 32);
+            this.panel1.Location = new System.Drawing.Point(33, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 208);
+            this.panel1.Size = new System.Drawing.Size(646, 206);
             this.panel1.TabIndex = 4;
-            // 
-            // bttSearch
-            // 
-            this.bttSearch.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bttSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bttSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bttSearch.Location = new System.Drawing.Point(400, 158);
-            this.bttSearch.Name = "bttSearch";
-            this.bttSearch.Size = new System.Drawing.Size(95, 29);
-            this.bttSearch.TabIndex = 3;
-            this.bttSearch.Text = "Search";
-            this.bttSearch.UseVisualStyleBackColor = false;
-            this.bttSearch.Click += new System.EventHandler(this.bttSearch_Click);
             // 
             // bttCancel
             // 
             this.bttCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttCancel.Location = new System.Drawing.Point(520, 158);
+            this.bttCancel.Location = new System.Drawing.Point(520, 147);
             this.bttCancel.Name = "bttCancel";
             this.bttCancel.Size = new System.Drawing.Size(95, 29);
             this.bttCancel.TabIndex = 4;
@@ -107,11 +93,25 @@
             this.bttCancel.UseVisualStyleBackColor = true;
             this.bttCancel.Click += new System.EventHandler(this.bttCancel_Click);
             // 
+            // bttSearch
+            // 
+            this.bttSearch.BackColor = System.Drawing.Color.RoyalBlue;
+            this.bttSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bttSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bttSearch.Location = new System.Drawing.Point(400, 147);
+            this.bttSearch.Name = "bttSearch";
+            this.bttSearch.Size = new System.Drawing.Size(95, 29);
+            this.bttSearch.TabIndex = 3;
+            this.bttSearch.Text = "Search";
+            this.bttSearch.UseVisualStyleBackColor = false;
+            this.bttSearch.Click += new System.EventHandler(this.bttSearch_Click);
+            // 
             // Frm_ForgetPass
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(716, 274);
+            this.ClientSize = new System.Drawing.Size(714, 268);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ForgetPass";

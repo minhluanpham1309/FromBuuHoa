@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_lastname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_CMND = new System.Windows.Forms.TextBox();
@@ -40,15 +40,15 @@
             this.txt_phoneNumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dt_customer = new System.Windows.Forms.DataGridView();
-            this.btn_addInfo = new System.Windows.Forms.Button();
-            this.btn_editInfo = new System.Windows.Forms.Button();
-            this.btn_deleteInfo = new System.Windows.Forms.Button();
             this.col_check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_id_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_del = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_addInfo = new System.Windows.Forms.Button();
+            this.btn_editInfo = new System.Windows.Forms.Button();
+            this.btn_deleteInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dt_customer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 87);
+            this.label2.Location = new System.Drawing.Point(10, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 19);
@@ -104,7 +104,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Thông tin khách hàng";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // txt_address
             // 
@@ -150,8 +149,8 @@
             // 
             this.dt_customer.AllowUserToAddRows = false;
             this.dt_customer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dt_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt_customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_check,
@@ -170,47 +169,12 @@
             this.dt_customer.TabIndex = 11;
             this.dt_customer.Click += new System.EventHandler(this.dt_customer_Click);
             // 
-            // btn_addInfo
-            // 
-            this.btn_addInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addInfo.Location = new System.Drawing.Point(230, 168);
-            this.btn_addInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_addInfo.Name = "btn_addInfo";
-            this.btn_addInfo.Size = new System.Drawing.Size(136, 31);
-            this.btn_addInfo.TabIndex = 12;
-            this.btn_addInfo.Text = "Thêm thông tin";
-            this.btn_addInfo.UseVisualStyleBackColor = true;
-            this.btn_addInfo.Click += new System.EventHandler(this.btn_addInfo_Click);
-            // 
-            // btn_editInfo
-            // 
-            this.btn_editInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editInfo.Location = new System.Drawing.Point(376, 168);
-            this.btn_editInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_editInfo.Name = "btn_editInfo";
-            this.btn_editInfo.Size = new System.Drawing.Size(130, 31);
-            this.btn_editInfo.TabIndex = 13;
-            this.btn_editInfo.Text = "Sửa thông tin";
-            this.btn_editInfo.UseVisualStyleBackColor = true;
-            // 
-            // btn_deleteInfo
-            // 
-            this.btn_deleteInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deleteInfo.Location = new System.Drawing.Point(510, 168);
-            this.btn_deleteInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_deleteInfo.Name = "btn_deleteInfo";
-            this.btn_deleteInfo.Size = new System.Drawing.Size(90, 31);
-            this.btn_deleteInfo.TabIndex = 14;
-            this.btn_deleteInfo.Text = "Xóa";
-            this.btn_deleteInfo.UseVisualStyleBackColor = true;
-            this.btn_deleteInfo.Click += new System.EventHandler(this.btn_deleteInfo_Click);
-            // 
             // col_check
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = false;
-            this.col_check.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.NullValue = false;
+            this.col_check.DefaultCellStyle = dataGridViewCellStyle2;
             this.col_check.FalseValue = "0";
             this.col_check.Frozen = true;
             this.col_check.HeaderText = "Check";
@@ -259,6 +223,41 @@
             this.col_del.HeaderText = "Xóa";
             this.col_del.Name = "col_del";
             this.col_del.Width = 50;
+            // 
+            // btn_addInfo
+            // 
+            this.btn_addInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addInfo.Location = new System.Drawing.Point(230, 168);
+            this.btn_addInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_addInfo.Name = "btn_addInfo";
+            this.btn_addInfo.Size = new System.Drawing.Size(136, 31);
+            this.btn_addInfo.TabIndex = 12;
+            this.btn_addInfo.Text = "Thêm thông tin";
+            this.btn_addInfo.UseVisualStyleBackColor = true;
+            this.btn_addInfo.Click += new System.EventHandler(this.btn_addInfo_Click);
+            // 
+            // btn_editInfo
+            // 
+            this.btn_editInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editInfo.Location = new System.Drawing.Point(376, 168);
+            this.btn_editInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_editInfo.Name = "btn_editInfo";
+            this.btn_editInfo.Size = new System.Drawing.Size(130, 31);
+            this.btn_editInfo.TabIndex = 13;
+            this.btn_editInfo.Text = "Sửa thông tin";
+            this.btn_editInfo.UseVisualStyleBackColor = true;
+            // 
+            // btn_deleteInfo
+            // 
+            this.btn_deleteInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteInfo.Location = new System.Drawing.Point(510, 168);
+            this.btn_deleteInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deleteInfo.Name = "btn_deleteInfo";
+            this.btn_deleteInfo.Size = new System.Drawing.Size(90, 31);
+            this.btn_deleteInfo.TabIndex = 14;
+            this.btn_deleteInfo.Text = "Xóa";
+            this.btn_deleteInfo.UseVisualStyleBackColor = true;
+            this.btn_deleteInfo.Click += new System.EventHandler(this.btn_deleteInfo_Click);
             // 
             // Frm_ManageCustomer
             // 

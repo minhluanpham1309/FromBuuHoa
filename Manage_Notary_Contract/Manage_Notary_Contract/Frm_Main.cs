@@ -17,13 +17,13 @@ namespace Manage_Notary_Contract
             InitializeComponent();
         }
 
-        Cl_Database db = new Cl_Database();
-        public string err = string.Empty;
+        //Cl_Database db = new Cl_Database();
+        //public string err = string.Empty;
 
         public void Frm_Main_Load(object sender, EventArgs e)
         {
 
-            MessageBox.Show(db.KiemTraKetNoi(ref err) ? "Connected" : "Fail\n" + err);
+           // MessageBox.Show(db.KiemTraKetNoi(ref err) ? "Connected" : "Fail\n" + err);
             
 
         }

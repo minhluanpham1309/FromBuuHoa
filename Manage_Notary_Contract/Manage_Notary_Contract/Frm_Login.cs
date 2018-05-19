@@ -28,14 +28,14 @@ namespace Manage_Notary_Contract
 
             if (CompareTwoString(userName, txtUsername.Text) && CompareTwoString(passWord, txtPassword.Text))
             {
-                MessageBox.Show("Log In successfuly!!!");
+                MessageBox.Show("Log In successfuly.");
                 this.Hide();
-                Frm_Main main = new Frm_Main();
-                main.Show();
+                Frm_Connection connect = new Frm_Connection();
+                connect.Show();
             }
             else
             {
-                MessageBox.Show("Incorrect username or password!!!");
+                MessageBox.Show("Incorrect username or password.");
                 txtUsername.Text = txtPassword.Text = "";
                 txtUsername.Focus();
             }
@@ -56,7 +56,9 @@ namespace Manage_Notary_Contract
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = lbLogin;
+            //this.ActiveControl = lbLogin;
+            txtUsername.Text = txtPassword.Text = "admin";
+            txtUsername.ForeColor = txtPassword.ForeColor = Color.Black;
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
