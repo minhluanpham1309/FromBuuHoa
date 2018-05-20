@@ -70,11 +70,11 @@ namespace Manage_Notary_Contract
         {
             string s = null;
             bll_serverName = new BLL_ServerName();
-            load_server_name(ref s, bll_serverName);
+            load_server_name(ref s);
             cbo_servreName.SelectedIndex = 0;
             cbbDatabaseName.SelectedIndex = 0;
         }
-        public void load_server_name(ref string s, BLL_ServerName bll)
+        public void load_server_name(ref string s)
         {
             table = SqlDataSourceEnumerator.Instance.GetDataSources();
 
@@ -100,6 +100,7 @@ namespace Manage_Notary_Contract
         {
             bll_serverName.cnn.Open();
             table = bll_serverName.cnn.GetSchema("Databases");
+            cbbDatabaseName.Items.Clear();
             foreach (DataRow row in table.Rows)
             {
                 cbbDatabaseName.Items.Add(row["database_name"]);

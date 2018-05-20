@@ -30,11 +30,9 @@ namespace Manage_Notary_Contract
                     {
                         s = row["ServerName"].ToString();
                     }
-                    if (!s.Equals(svName))
-                    {
-                        svName = s;
-                    }
+                        
                 }
+                svName = s;
             }
             return svName;
         }

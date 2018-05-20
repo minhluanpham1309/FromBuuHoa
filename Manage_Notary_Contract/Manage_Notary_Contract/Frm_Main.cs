@@ -23,8 +23,7 @@ namespace Manage_Notary_Contract
         public void Frm_Main_Load(object sender, EventArgs e)
         {
 
-            MessageBox.Show(db.KiemTraKetNoi(ref err) ? "Connected" : "Fail\n" + err);
-            
+            //MessageBox.Show(db.KiemTraKetNoi(ref err) ? "Connected" : "Fail\n" + err);
 
         }
 
