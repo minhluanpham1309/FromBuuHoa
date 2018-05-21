@@ -25,6 +25,7 @@ namespace Manage_Notary_Contract
         public void bttLogIn_Click(object sender, EventArgs e)
         {
             string userName = "admin", passWord = "admin";
+            string userNV = "nhanvien", passNV = "nhanvien";
 
             if (CompareTwoString(userName, txtUsername.Text) && CompareTwoString(passWord, txtPassword.Text))
             {
@@ -32,6 +33,15 @@ namespace Manage_Notary_Contract
                 this.Hide();
                 Frm_Connection connect = new Frm_Connection();
                 connect.Show();
+            }
+            else if (CompareTwoString(userNV, txtUsername.Text) && CompareTwoString(passNV, txtPassword.Text))
+            {
+                string err = string.Empty;
+                MessageBox.Show("Log In successfully.");
+                this.Hide();
+                DialogResult res = MessageBox.Show(new Cl_Database().KiemTraKetNoi(ref err) ? "Connected" : "Fail\n" + err);
+                Frm_Main frmMain = new Frm_Main();
+                frmMain.Show();
             }
             else
             {
@@ -56,9 +66,9 @@ namespace Manage_Notary_Contract
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-            //this.ActiveControl = lbLogin;
-            txtUsername.Text = txtPassword.Text = "admin";
-            txtUsername.ForeColor = txtPassword.ForeColor = Color.Black;
+            this.ActiveControl = lbLogin;
+            //txtUsername.Text = txtPassword.Text = "admin";
+            //txtUsername.ForeColor = txtPassword.ForeColor = Color.Black;
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)

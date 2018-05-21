@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Sql;
@@ -16,25 +17,28 @@ namespace Manage_Notary_Contract
         public static string getServerName()
         {
             svName = Environment.MachineName;
-            DataTable table = SqlDataSourceEnumerator.Instance.GetDataSources();
-            string s = null;
-            if (table != null)
+            var registryViewArray = new[] { RegistryView.Registry32, RegistryView.Registry64 };
+            string s = string.Empty;
+            foreach (var registryView in registryViewArray)
             {
-                foreach (DataRow row in table.Rows)
+                using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView))
+                using (var key = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server"))
                 {
-                    if (row["InstanceName"].ToString() != null)
+                    var instances = (string[])key?.GetValue("InstalledInstances");
+                    if (instances != null)
                     {
-                        s = row["ServerName"].ToString() + "\\" + row["InstanceName"].ToString();
+                        foreach (var element in instances)
+                        {
+                            if (element == "MSSQLSERVER")
+                                s = System.Environment.MachineName;
+                            else
+                                s = System.Environment.MachineName + @"\" + element;
+                        }
                     }
-                    else
-                    {
-                        s = row["ServerName"].ToString();
-                    }
-                        
                 }
-                svName = s;
             }
-            return svName;
+
+            return svName = s;
         }
 
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbServerName = new System.Windows.Forms.Label();
             this.lbDatabaseName = new System.Windows.Forms.Label();
             this.lbIntegSecurity = new System.Windows.Forms.Label();
@@ -37,12 +37,12 @@
             this.bttTestConnection = new System.Windows.Forms.Button();
             this.bttConnect = new System.Windows.Forms.Button();
             this.pnConnection = new System.Windows.Forms.Panel();
+            this.cbo_servreName = new System.Windows.Forms.ComboBox();
             this.cbbDatabaseName = new System.Windows.Forms.ComboBox();
             this.bttCancel = new System.Windows.Forms.Button();
             this.lbConnection = new System.Windows.Forms.Label();
             this.dgvServerName = new System.Windows.Forms.DataGridView();
             this.colServerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbo_servreName = new System.Windows.Forms.ComboBox();
             this.pnConnection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServerName)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.lbServerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbServerName.Location = new System.Drawing.Point(59, 65);
             this.lbServerName.Name = "lbServerName";
-            this.lbServerName.Size = new System.Drawing.Size(153, 32);
+            this.lbServerName.Size = new System.Drawing.Size(101, 21);
             this.lbServerName.TabIndex = 0;
             this.lbServerName.Text = "Server Name";
             // 
@@ -63,7 +63,7 @@
             this.lbDatabaseName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDatabaseName.Location = new System.Drawing.Point(59, 115);
             this.lbDatabaseName.Name = "lbDatabaseName";
-            this.lbDatabaseName.Size = new System.Drawing.Size(184, 32);
+            this.lbDatabaseName.Size = new System.Drawing.Size(120, 21);
             this.lbDatabaseName.TabIndex = 1;
             this.lbDatabaseName.Text = "Database Name";
             // 
@@ -73,7 +73,7 @@
             this.lbIntegSecurity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIntegSecurity.Location = new System.Drawing.Point(59, 165);
             this.lbIntegSecurity.Name = "lbIntegSecurity";
-            this.lbIntegSecurity.Size = new System.Drawing.Size(217, 32);
+            this.lbIntegSecurity.Size = new System.Drawing.Size(141, 21);
             this.lbIntegSecurity.TabIndex = 2;
             this.lbIntegSecurity.Text = "Integrated Security";
             // 
@@ -83,7 +83,7 @@
             this.txtIntegratedSecurity.Location = new System.Drawing.Point(223, 162);
             this.txtIntegratedSecurity.Name = "txtIntegratedSecurity";
             this.txtIntegratedSecurity.ReadOnly = true;
-            this.txtIntegratedSecurity.Size = new System.Drawing.Size(256, 39);
+            this.txtIntegratedSecurity.Size = new System.Drawing.Size(256, 29);
             this.txtIntegratedSecurity.TabIndex = 5;
             this.txtIntegratedSecurity.Text = "True";
             // 
@@ -133,6 +133,17 @@
             this.pnConnection.Size = new System.Drawing.Size(506, 273);
             this.pnConnection.TabIndex = 8;
             // 
+            // cbo_servreName
+            // 
+            this.cbo_servreName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbo_servreName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_servreName.FormattingEnabled = true;
+            this.cbo_servreName.Location = new System.Drawing.Point(223, 62);
+            this.cbo_servreName.Name = "cbo_servreName";
+            this.cbo_servreName.Size = new System.Drawing.Size(256, 29);
+            this.cbo_servreName.TabIndex = 11;
+            this.cbo_servreName.SelectedIndexChanged += new System.EventHandler(this.cbo_servreName_SelectedIndexChanged);
+            // 
             // cbbDatabaseName
             // 
             this.cbbDatabaseName.BackColor = System.Drawing.Color.White;
@@ -142,7 +153,7 @@
             this.cbbDatabaseName.FormattingEnabled = true;
             this.cbbDatabaseName.Location = new System.Drawing.Point(223, 112);
             this.cbbDatabaseName.Name = "cbbDatabaseName";
-            this.cbbDatabaseName.Size = new System.Drawing.Size(256, 40);
+            this.cbbDatabaseName.Size = new System.Drawing.Size(256, 29);
             this.cbbDatabaseName.TabIndex = 10;
             // 
             // bttCancel
@@ -165,7 +176,7 @@
             this.lbConnection.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConnection.Location = new System.Drawing.Point(19, 21);
             this.lbConnection.Name = "lbConnection";
-            this.lbConnection.Size = new System.Drawing.Size(174, 40);
+            this.lbConnection.Size = new System.Drawing.Size(115, 25);
             this.lbConnection.TabIndex = 8;
             this.lbConnection.Text = "Connection";
             // 
@@ -179,27 +190,27 @@
             this.dgvServerName.ColumnHeadersVisible = false;
             this.dgvServerName.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colServerName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvServerName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvServerName.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvServerName.Enabled = false;
             this.dgvServerName.EnableHeadersVisualStyles = false;
             this.dgvServerName.Location = new System.Drawing.Point(0, 538);
             this.dgvServerName.Name = "dgvServerName";
             this.dgvServerName.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvServerName.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvServerName.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvServerName.RowHeadersVisible = false;
             this.dgvServerName.RowHeadersWidth = 20;
             this.dgvServerName.RowTemplate.ReadOnly = true;
@@ -213,17 +224,6 @@
             this.colServerName.HeaderText = "SERVER NAME";
             this.colServerName.Name = "colServerName";
             this.colServerName.ReadOnly = true;
-            // 
-            // cbo_servreName
-            // 
-            this.cbo_servreName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbo_servreName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_servreName.FormattingEnabled = true;
-            this.cbo_servreName.Location = new System.Drawing.Point(223, 68);
-            this.cbo_servreName.Name = "cbo_servreName";
-            this.cbo_servreName.Size = new System.Drawing.Size(256, 35);
-            this.cbo_servreName.TabIndex = 11;
-            this.cbo_servreName.SelectedIndexChanged += new System.EventHandler(this.cbo_servreName_SelectedIndexChanged);
             // 
             // Frm_Connection
             // 

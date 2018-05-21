@@ -77,29 +77,6 @@ namespace Manage_Notary_Contract
         }
         public void load_server_name(ref string s)
         {
-            //      SqlDataSourceEnumerator instance =
-            //SqlDataSourceEnumerator.Instance;
-            //      table = instance.GetDataSources();
-
-            //      if (table.Rows.Count>0)
-            //      {
-            //          foreach (DataRow row in table.Rows)
-            //          {
-            //              if (row["InstanceName"].ToString() != null)
-            //              {
-            //                  s = row["ServerName"].ToString() + "\\" + row["InstanceName"].ToString();
-
-            //              }
-            //              else
-            //              {
-            //                  s = row["ServerName"].ToString();
-            //              }
-            //              cbo_servreName.Items.Add(s);
-            //          }
-            //      }
-            //      else
-            //          cbo_servreName.Items.Add(Environment.MachineName);
-            //      s = cbo_servreName.Items[0].ToString();
             var registryViewArray = new[] { RegistryView.Registry32, RegistryView.Registry64 };
             s = string.Empty;
             foreach (var registryView in registryViewArray)

@@ -179,6 +179,7 @@ namespace Manage_Notary_Contract
             }
             return dataReader;
         }
+
         public string getServerName(string sql, CommandType ct)
         {
             string server = string.Empty;
