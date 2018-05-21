@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace Manage_Notary_Contract
 {
@@ -76,22 +77,48 @@ namespace Manage_Notary_Contract
         }
         public void load_server_name(ref string s)
         {
-            table = SqlDataSourceEnumerator.Instance.GetDataSources();
+            //      SqlDataSourceEnumerator instance =
+            //SqlDataSourceEnumerator.Instance;
+            //      table = instance.GetDataSources();
 
-            if (table != null)
+            //      if (table.Rows.Count>0)
+            //      {
+            //          foreach (DataRow row in table.Rows)
+            //          {
+            //              if (row["InstanceName"].ToString() != null)
+            //              {
+            //                  s = row["ServerName"].ToString() + "\\" + row["InstanceName"].ToString();
+
+            //              }
+            //              else
+            //              {
+            //                  s = row["ServerName"].ToString();
+            //              }
+            //              cbo_servreName.Items.Add(s);
+            //          }
+            //      }
+            //      else
+            //          cbo_servreName.Items.Add(Environment.MachineName);
+            //      s = cbo_servreName.Items[0].ToString();
+            var registryViewArray = new[] { RegistryView.Registry32, RegistryView.Registry64 };
+            s = string.Empty;
+            foreach (var registryView in registryViewArray)
             {
-                foreach (DataRow row in table.Rows)
+                using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView))
+                using (var key = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server"))
                 {
-                    if (row["InstanceName"].ToString() != null)
+                    var instances = (string[])key?.GetValue("InstalledInstances");
+                    if (instances != null)
                     {
-                        s = row["ServerName"].ToString() + "\\" + row["InstanceName"].ToString();
-
+                        foreach (var element in instances)
+                        {
+                            if (element == "MSSQLSERVER")
+                                s = System.Environment.MachineName;
+                            else
+                                s = System.Environment.MachineName + @"\" + element;
+                            cbo_servreName.Items.Add(s);
+                        }
                     }
-                    else
-                    {
-                        s = row["ServerName"].ToString();
-                    }
-                    cbo_servreName.Items.Add(s);
                 }
             }
             s = cbo_servreName.Items[0].ToString();

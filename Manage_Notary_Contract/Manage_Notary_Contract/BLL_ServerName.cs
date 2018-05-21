@@ -18,9 +18,9 @@ namespace Manage_Notary_Contract
             cnn = data.getConnection();
         }
 
-        public string GetServerName()
-        {
-            return data.getServerName("GetServerName", CommandType.StoredProcedure);
-        }
+        //public string GetServerName()
+        //{
+        //    return data.getServerName("GetServerName", CommandType.StoredProcedure);
+        //}
     }
 }
